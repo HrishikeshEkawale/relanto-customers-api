@@ -1,0 +1,14 @@
+#%Catalog Descriptor 1.0
+projects:
+  - main: src\main\resources\api\relanto-customers-api.raml
+    assetId: relanto-customers-api
+    version: 1.0.0
+    apiVersion: v1
+    contact:
+      name: 'Hrishikesh Ekawale'
+      email: 'testemail@gmail.com'
+    tags:
+      - auther
+      - sys-api
+    documentation:
+        Home: exchange-docs\home.md
