@@ -1,0 +1,59 @@
+#%RAML 1.0
+title: relanto-customers-api
+version: v1
+
+types:
+  Customer:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+        required: true
+      email:
+        type: string
+        required: true
+/customers:
+  get:
+    description: Retrieve a list of customers
+    responses:
+      200:
+        body:
+          application/json:
+            type: Customer[]
+            example: |
+              [
+                {
+                  "id": "1",
+                  "name": "John Doe",
+                  "email": "john.doe@example.com"
+                },
+                {
+                  "id": "2",
+                  "name": "Jane Smith",
+                  "email": "jane.smith@example.com"
+                }
+              ]
+      400:
+        description: Bad request
+      500:
+        description: Internal server error
+  post:
+    description: Add a new customer
+    body:
+      application/json:
+        type: Customer
+        example: |
+          {
+            "id": "3",
+            "name": "Alice Brown",
+            "email": "alice.brown@example.com"
+          }
+    responses:
+      201:
+        description: Customer created successfully
+      400:
+        description: Bad request
+      500:
+        description: Internal server error
