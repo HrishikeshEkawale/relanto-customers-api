@@ -1,4 +1,4 @@
-#relanto-customers-api
+# relanto-customers-api
 
 Overview: The Customer Management API is a MuleSoft-based integration project designed to facilitate the management of customer data. This API will expose two main endpoints, GET and POST, enabling users to retrieve customer information and create new customer records respectively. It aims to provide a seamless and scalable solution for handling customer data with minimal overhead.
 
